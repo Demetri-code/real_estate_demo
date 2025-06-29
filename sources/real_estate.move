@@ -25,7 +25,7 @@ module real_estate_demo::registry {
         next_id: u64,
     }
 
-    /// Initializes the property registry — only registrar can do this
+    // Initializes the property registry — only registrar can do this
     public entry fun initialize_registry(account: &signer) {
         let sender = signer::address_of(account);
         assert!(sender == REGISTRAR_ADDRESS, error::invalid_argument(ENOT_REGISTRAR));
@@ -38,7 +38,7 @@ module real_estate_demo::registry {
         });
     }
 
-    /// Creates a new property record — only registrar can do this
+    // Creates a new property record — only registrar can do this
     public entry fun create_property(account: &signer, location: string::String, size_sqft: u64, owner: address) acquires Registry {
         let sender = signer::address_of(account);
         assert!(sender == REGISTRAR_ADDRESS, error::invalid_argument(ENOT_REGISTRAR));
@@ -57,7 +57,7 @@ module real_estate_demo::registry {
         table::add(&mut registry.properties, id, property);
     }
 
-    /// Transfers a property to a new owner — only current owner can do this
+    // Transfers a property to a new owner — only current owner can do this
     public entry fun transfer_property(account: &signer, registry_address: address, property_id: u64, new_owner: address) acquires Registry {
         let sender = signer::address_of(account);
         let registry = borrow_global_mut<Registry>(registry_address);
@@ -73,7 +73,7 @@ module real_estate_demo::registry {
         *table::borrow(&registry.properties, property_id)
     }
 
-    /// Returns only the owner of a property
+    // Returns only the owner of a property
     public fun get_owner(registry_address: address, property_id: u64): address acquires Registry {
         let registry = borrow_global<Registry>(registry_address);
         table::borrow(&registry.properties, property_id).owner
