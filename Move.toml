@@ -1,0 +1,14 @@
+[package]
+name = "real_estate_demo"
+version = "1.0.0"
+authors = ["Demetri"]
+
+[addresses]
+real_estate_demo = "0xA550C18"
+
+[dependencies.AptosFramework]
+git = "https://github.com/aptos-labs/aptos-framework.git"
+rev = "mainnet"
+subdir = "aptos-framework"
+
+[dev-dependencies]
