@@ -1,7 +1,11 @@
 
-Only the government (represented by a designated address) can register or initialize a property on the blockchain.
-Only the current owner of a property can transfer ownership to another address.
-Anyone can view property details (e.g., location, size, and current owner).
+Business Rules
+
+1. Only the government (represented by a designated address) can register or initialize a property on the blockchain.
+
+2. Only the current owner of a property can transfer ownership to another address.
+
+3. Anyone can view property details (e.g., location, size, and current owner).
 
 # Real Estate Registry (Move Language)
 
