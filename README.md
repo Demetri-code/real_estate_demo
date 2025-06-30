@@ -1,3 +1,8 @@
+
+Only the government (represented by a designated address) can register or initialize a property on the blockchain.
+Only the current owner of a property can transfer ownership to another address.
+Anyone can view property details (e.g., location, size, and current owner).
+
 # Real Estate Registry (Move Language)
 
 A smart contract module for managing real estate properties on-chain.
